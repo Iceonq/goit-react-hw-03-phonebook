@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div>
         <Section
-          title={'Phonebook'}
+          title={'Phonebok'}
           object={
             <Form
               contacts={this.state.contacts}
