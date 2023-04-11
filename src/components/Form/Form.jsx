@@ -18,10 +18,13 @@ export class Form extends Component {
     e.preventDefault();
     const { name, number } = this.state;
     const newContact = { id: nanoid(), name, number };
-    if (this.props.contacts.find(contact => contact.name === this.state.name)) {
+    if (this.props.contacts.find(contact => contact.name === name)) {
       alert(`Contact ${name} is in your contact list`);
-    }
-    if (name === '') {
+      this.setState({
+        name: '',
+        number: '',
+      });
+    } else if (name === '') {
       alert('Type name and number for a new contact below');
     } else {
       this.props.onContactCreate(newContact);
