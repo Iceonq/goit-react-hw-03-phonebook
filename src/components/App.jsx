@@ -23,7 +23,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     const storedContacts = localStorage.getItem('contacts');
-    if (storedContacts.length === 0) {
+    if (storedContacts === null) {
       this.state = {
         contacts: [],
       };
