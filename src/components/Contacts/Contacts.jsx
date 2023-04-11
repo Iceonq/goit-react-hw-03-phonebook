@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 export class Contacts extends Component {
   state = {
     filter: '',
-    contacts: [],
   };
 
   deleteContact = id => {
@@ -32,7 +31,7 @@ export class Contacts extends Component {
             )
             .map(contact => {
               return (
-                <li name="contact" id={nanoid()}>
+                <li key={nanoid()}>
                   <p>
                     {contact.name}: {contact.number}
                     <button onClick={() => this.deleteContact(contact.id)}>
