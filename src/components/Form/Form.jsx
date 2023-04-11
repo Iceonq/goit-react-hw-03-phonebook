@@ -20,10 +20,6 @@ export class Form extends Component {
     const newContact = { id: nanoid(), name, number };
     if (this.props.contacts.find(contact => contact.name === name)) {
       alert(`Contact ${name} is in your contact list`);
-      this.setState({
-        name: '',
-        number: '',
-      });
     } else if (name === '') {
       alert('Type name and number for a new contact below');
     } else {
