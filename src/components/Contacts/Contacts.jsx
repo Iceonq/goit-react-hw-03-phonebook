@@ -13,13 +13,9 @@ export class Contacts extends Component {
   };
 
   handleFiltering = event => {
-    if (this.props.contacts.length === 0) {
-      console.log('elo');
-    } else {
-      this.setState({
-        filter: event.target.value,
-      });
-    }
+    this.setState({
+      filter: event.target.value,
+    });
   };
 
   render() {
